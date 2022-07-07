@@ -1,15 +1,10 @@
-import { useFirstPrismicDocument } from "@prismicio/react";
-import React from "react";
+import { MappedRoutes } from "./routes";
 
 
 function App() {
 
-  const [document] = useFirstPrismicDocument()
-
-  console.log(document)
-
   return (
-    <h1>Teste</h1>
+    <MappedRoutes />
   );
 }
 
