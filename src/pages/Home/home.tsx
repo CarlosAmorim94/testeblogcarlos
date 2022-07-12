@@ -2,7 +2,9 @@ import { HandleDocument } from "../../helpers/prismic/home"
 
 export const Home = () => {
 
-  HandleDocument()
+  const homeData = HandleDocument()
+
+  console.log(homeData)
 
   return (
     <>
