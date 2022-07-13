@@ -11,19 +11,20 @@ export const HandleDocument = () => {
   return {
     title: data?.display_title?.[0]?.text,
     description: data?.display_description?.[0]?.text,
-    cardsCContainer: {
-      title: data?.body?.[0]?.primary?.card_container_title?.[0]?.text,
-      description: data?.body?.[0]?.primary?.card_container_description?.[0]?.text,
-      showAsCarousel: data?.body?.[0]?.primary?.card_container_is_carousel,
-      cards: data?.body?.[0]?.items?.map((prismicCard) => ({
+    cardsContainer: data?.body?.map((prismicCardContainer) => ({
+      type: prismicCardContainer?.slice_type,
+      title: prismicCardContainer?.primary?.card_container_title?.[0]?.text,
+      description: prismicCardContainer?.primary?.card_container_description?.[0]?.text,
+      showAsCarousel: prismicCardContainer?.primary?.card_container_is_carousel,
+      cards: prismicCardContainer?.items?.map((prismicCard) => ({
         publishDate: prismicCard?.card_publish_date,
-        title: prismicCard?.card_title?.[0]?.text,
-        content: prismicCard?.card_content?.[0]?.text,
+        title: prismicCard?.card_title?.[0]?.text ?? '',
+        content: prismicCard?.card_content?.[0]?.text ?? '',
         image: {
           url: prismicCard?.card_image?.recommended?.url ?? prismicCard?.card_image?.url,
           alt: prismicCard?.card_image?.recommended?.alt ?? prismicCard?.card_image?.alt,
         }
       }))
-    }
+    }))
   }
 }

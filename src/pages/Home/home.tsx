@@ -4,11 +4,10 @@ export const Home = () => {
 
   const homeData = HandleDocument()
 
-  console.log(homeData)
-
   return (
     <>
-      <h1>Home</h1>
+      <h1>{homeData?.title}</h1>
+      <div>{homeData?.description}</div>
     </>
   )
 }
