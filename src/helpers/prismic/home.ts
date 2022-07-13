@@ -1,5 +1,5 @@
 import { useSinglePrismicDocument } from "@prismicio/react"
-import { homeDocument } from "./types/home"
+import { homeDocument } from "./types/home/home"
 
 export const HandleDocument = () => {
   const [document] = useSinglePrismicDocument('home')

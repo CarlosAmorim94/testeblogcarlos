@@ -1,4 +1,4 @@
-import { prismicText, prismicImage } from "./generals";
+import { prismicText, prismicImage } from "../generals";
 
 export interface prismicCard {
   card_title?: prismicText[];
