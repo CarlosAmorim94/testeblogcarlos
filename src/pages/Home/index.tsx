@@ -1,4 +1,5 @@
 
+import { Header } from "../../components/Header"
 import { HandleDocument } from "../../helpers/prismic/home"
 
 export const Home = () => {
@@ -7,8 +8,7 @@ export const Home = () => {
 
   return (
     <>
-      <h1>{homeData?.title}</h1>
-      <div>{homeData?.description}</div>
+      <Header />
 
       <section>
 
