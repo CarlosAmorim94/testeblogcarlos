@@ -15,7 +15,6 @@ export const HandleDocument = () => {
       type: prismicCardContainer?.slice_type,
       title: prismicCardContainer?.primary?.card_container_title?.[0]?.text,
       description: prismicCardContainer?.primary?.card_container_description?.[0]?.text,
-      showAsCarousel: prismicCardContainer?.primary?.card_container_is_carousel,
       cards: prismicCardContainer?.items?.map((prismicCard) => ({
         publishDate: prismicCard?.card_publish_date,
         title: prismicCard?.card_title?.[0]?.text ?? '',

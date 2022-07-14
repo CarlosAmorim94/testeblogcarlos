@@ -25,6 +25,7 @@ export const Home = () => {
               {cardContainer?.cards.map((card) => {
                 return (
                   <div>
+
                     <img src={card.image.url} alt={card.title} />
                     <h2>{card.title}</h2>
                     <p>{card.content}</p>
